@@ -63,7 +63,9 @@ int chieftain_acquire_seat_plates(chieftain_t *self, int berserker)
                 pratos_disp[2] = 1;
             }
 
-            if (prato_dir == prato_esq) pratos_disp[2] = 0; 
+            if (prato_dir == prato_esq) {
+                pratos_disp[2] = 0; 
+            }
             // se houver só 2 pratos: o dir e o esq sao o mesmo (há apenas 2 pratos), 
             // entao tenho que remover a duplicação ao transformar 
             // o de indice 0 ou 2 (o mesmo) em 0
@@ -191,3 +193,4 @@ void chieftain_finalize(chieftain_t *self)
 
     plog("[chieftain] Finalized\n");
 }
+
